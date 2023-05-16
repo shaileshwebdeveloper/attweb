@@ -9,7 +9,7 @@ export const TopSection = () => {
  
         <Flex m="auto" w="100%" textAlign={"left"}>
 
-            <Box border={"1px solid red"} w="48%" m="auto" h="700px" p="5%">
+            <Box w="48%" m="auto" h="700px" p="5%">
                
             <Text fontSize='4xl' as='b'> Real-Time Attendance Management App</Text>
 
@@ -41,7 +41,7 @@ export const TopSection = () => {
 
             </Box>
 
-            <Box border={"1px solid red"} w="50%">
+            <Box  w="50%">
                  
              <TopForm />
                 
