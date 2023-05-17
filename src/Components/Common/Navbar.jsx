@@ -21,9 +21,15 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+
+
   const { isOpen, onToggle } = useDisclosure();
+  
+  const navigate =  useNavigate()
+
 
   return (
     <Box>
@@ -57,6 +63,7 @@ export const Navbar = () => {
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
+            onClick={() => navigate("/")}
           >
             LOGO
           </Text>
@@ -77,7 +84,7 @@ export const Navbar = () => {
             fontSize={"sm"}
             fontWeight={400}
             variant={"link"}
-            href={"#"}
+            onClick={() => navigate("/signin")}
           >
             Sign In
           </Button>
