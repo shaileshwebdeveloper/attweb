@@ -1,80 +1,81 @@
 import {
-    Flex,
-    Box,
-    FormControl,
-    FormLabel,
-    Input,
-    InputGroup,
-    HStack,
-    InputRightElement,
-    Stack,
-    Button,
-    Heading,
-    Text,
-    useColorModeValue,
-    Link,
-  } from '@chakra-ui/react';
-  import { useState } from 'react';
-  import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-  
-  export const TopForm = () => {
-    const [showPassword, setShowPassword] = useState(false);
-  
-    return (
-      <Flex
-        minH={'100vh'}
-        align={'center'}
-        justify={'center'}
-        bg={useColorModeValue('gray.50', 'gray.800')}>
-        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
-          <Stack align={'center'}>
-            <Heading fontSize={'4xl'} textAlign={'center'}>
-               Schedule a Demo
-            </Heading>
-            <Text fontSize={'lg'} color={'gray.600'}>
-            Switch to the Best Attendance Management App
-            </Text>
-          </Stack>
-          <Box
-            rounded={'lg'}
-            bg={useColorModeValue('white', 'gray.700')}
-            boxShadow={'lg'}
-            p={8}>
-            <Stack spacing={4}>
-              <HStack>
-                <Box>
-                  <FormControl id="firstName" isRequired>
-                    <FormLabel>First Name</FormLabel>
-                    <Input type="text" />
-                  </FormControl>
-                </Box>
-                <Box>
-                  <FormControl id="lastName">
-                    <FormLabel>Last Name</FormLabel>
-                    <Input type="text" />
-                  </FormControl>
-                </Box>
-              </HStack>
+  Flex,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  InputGroup,
+  HStack,
+  InputRightElement,
+  Stack,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
+  Link,
+} from "@chakra-ui/react";
+import { useState } from "react";
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 
-              <HStack>
-                <Box>
-                  <FormControl id="email" isRequired>
+export const TopForm = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  return (
+    <Flex
+      minH={"100vh"}
+      align={"center"}
+      justify={"center"}
+      bg={useColorModeValue("gray.50", "gray.800")}
+    >
+      <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
+        <Stack align={"center"}>
+          <Heading fontSize={"4xl"} textAlign={"center"}>
+            Schedule a Demo
+          </Heading>
+          <Text fontSize={"lg"} color={"gray.600"}>
+            Switch to the Best Attendance Management App
+          </Text>
+        </Stack>
+        <Box
+          rounded={"lg"}
+          bg={useColorModeValue("white", "gray.700")}
+          boxShadow={"lg"}
+          p={8}
+        >
+          <Stack spacing={4}>
+            <HStack>
+              <Box>
+                <FormControl id="firstName" isRequired>
+                  <FormLabel>First Name</FormLabel>
+                  <Input type="text" />
+                </FormControl>
+              </Box>
+              <Box>
+                <FormControl id="lastName">
+                  <FormLabel>Last Name</FormLabel>
+                  <Input type="text" />
+                </FormControl>
+              </Box>
+            </HStack>
+
+            <HStack>
+              <Box>
+                <FormControl id="email" isRequired>
                   <FormLabel>Email address</FormLabel>
                   <Input type="email" />
-                  </FormControl>
-                </Box>
-                <Box>
-                <FormControl id="mobile" isRequired>
-                <FormLabel>Mobile</FormLabel>
-                <Input type="number" />
                 </FormControl>
-                </Box>
-              </HStack>
+              </Box>
+              <Box>
+                <FormControl id="mobile" isRequired>
+                  <FormLabel>Mobile</FormLabel>
+                  <Input type="number" />
+                </FormControl>
+              </Box>
+            </HStack>
 
-
-              <HStack>
-                <Box>
-                  <FormControl id="employees" isRequired>
+            <HStack>
+              <Box>
+                <FormControl id="employees" isRequired>
                   <FormLabel>Employees</FormLabel>
                   <select id="employees" name="employees">
                     <option value="">No of employees</option>
@@ -85,13 +86,13 @@ import {
                     <option value="501">501-1000</option>
                     <option value="1000">1000+</option>
                   </select>
-                  </FormControl>
-                </Box>
-                <Box>
+                </FormControl>
+              </Box>
+              <Box>
                 <FormControl id="mobile" isRequired>
-                <FormLabel>State</FormLabel>
-                {/* <!--- India states --> */}
-                <select id="country-state" name="country-state">
+                  <FormLabel>State</FormLabel>
+                  {/* <!--- India states --> */}
+                  <select id="country-state" name="country-state">
                     <option value="">Select state</option>
                     <option value="AN">Andaman and Nicobar Islands</option>
                     <option value="AP">Andhra Pradesh</option>
@@ -130,34 +131,32 @@ import {
                     <option value="UP">Uttar Pradesh</option>
                     <option value="UT">Uttarakhand</option>
                     <option value="WB">West Bengal</option>
-                </select>
+                  </select>
                 </FormControl>
-                </Box>
-              </HStack>
+              </Box>
+            </HStack>
 
-
-      
-
-              <Stack spacing={10} pt={2}>
-                <Button
-                  loadingText="Submitting"
-                  size="lg"
-                  bg={'blue.400'}
-                  color={'white'}
-                  _hover={{
-                    bg: 'blue.500',
-                  }}>
-                 DOWNLOAD OUR APP
-                </Button>
-              </Stack>
-              {/* <Stack pt={6}>
+            <Stack spacing={10} pt={2}>
+              <Button
+                loadingText="Submitting"
+                size="lg"
+                bg={"blue.400"}
+                color={"white"}
+                _hover={{
+                  bg: "blue.500",
+                }}
+              >
+                DOWNLOAD OUR APP
+              </Button>
+            </Stack>
+            {/* <Stack pt={6}>
                 <Text align={'center'}>
                   Already a user? <Link color={'blue.400'}>Login</Link>
                 </Text>
               </Stack> */}
-            </Stack>
-          </Box>
-        </Stack>
-      </Flex>
-    );
-  }
+          </Stack>
+        </Box>
+      </Stack>
+    </Flex>
+  );
+};
