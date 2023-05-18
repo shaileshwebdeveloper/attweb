@@ -12,8 +12,12 @@ import {
     Text,
     useColorModeValue,
   } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
   
   export const Signin = () =>  {
+
+      const navigate =  useNavigate()
+
     return (
       <Flex
         minH={'100vh'}
@@ -47,7 +51,7 @@ import {
                   align={'start'}
                   justify={'space-between'}>
                   <Checkbox>Remember me</Checkbox>
-                  <Link color={'blue.400'}>Forgot password?</Link>
+                  <Link color={'blue.400'} onClick={() => navigate('/forgot-password')}>Forgot password?</Link>
                 </Stack>
                 <Button
                   bg={'blue.400'}
