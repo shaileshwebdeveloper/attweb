@@ -37,7 +37,7 @@ import {
             <Stack spacing={4}>
               <FormControl id="email">
                 <FormLabel>Email address</FormLabel>
-                <Input type="email" />
+                <Input type="email" placeholder='Enter your mail'/>
               </FormControl>
               <Stack spacing={10}>
                 <Button
